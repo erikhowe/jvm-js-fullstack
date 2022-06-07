@@ -13,6 +13,11 @@ import org.litote.kmongo.coroutine.*
 import org.litote.kmongo.reactivestreams.KMongo
 import com.mongodb.ConnectionString
 
+val shoppingList = mutableListOf(
+    ShoppingListItem("Cucumbers 🥒", 1),
+    ShoppingListItem("Tomatoes 🍅", 2),
+    ShoppingListItem("Orange Juice 🍊", 3)
+)
 fun main() {
     embeddedServer(Netty, 9090) {
         routing {
