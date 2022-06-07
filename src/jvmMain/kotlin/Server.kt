@@ -21,8 +21,19 @@ val shoppingList = mutableListOf(
 fun main() {
     embeddedServer(Netty, 9090) {
         routing {
-            get("/hello") {
-                call.respondText("Hello, API!")
+            route(ShoppingListItem.path) {
+                get {
+                    call.respond(shoppingList)
+                }
+                post {
+                    shoppingList += call.receive<ShoppingListItem>()
+                    call.respond(HttpStatusCode.OK)
+                }
+                delete("/{id}") {
+                    val id = call.parameters["id"]?.toInt() ?: error("Invalid delete request")
+                    shoppingList.removeIf { it.id == id }
+                    call.respond(HttpStatusCode.OK)
+                }
             }
         }
         install(ContentNegotiation) {
