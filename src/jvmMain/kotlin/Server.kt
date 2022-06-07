@@ -22,6 +22,15 @@ fun main() {
     embeddedServer(Netty, 9090) {
         routing {
             route(ShoppingListItem.path) {
+                get("/") {
+                    call.respondText(
+                        this::class.java.classLoader.getResource("index.html")!!.readText(),
+                        ContentType.Text.Html
+                    )
+                }
+                static("/") {
+                    resources("")
+                }
                 get {
                     call.respond(shoppingList)
                 }
