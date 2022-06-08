@@ -26,4 +26,13 @@ val App = FC<Props> {
             }
         }
     }
+    InputComponent {
+        onSubmit = { input ->
+            val cartItem = ShoppingListItem(input.replace("!", ""), input.count { it == '!' })
+            scope.launch {
+                addShoppingListItem(cartItem)
+                shoppingList = getShoppingList()
+            }
+        }
+    }
 }
