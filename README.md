@@ -1,8 +1,20 @@
-[![official JetBrains project](https://jb.gg/badges/official.svg)](https://confluence.jetbrains.com/display/ALL/JetBrains+on+GitHub)
-[![GitHub license](https://img.shields.io/badge/license-Apache%20License%202.0-blue.svg?style=flat)](https://www.apache.org/licenses/LICENSE-2.0)
+# Shopping List App
 
-# Full Stack JVM & JS App Hands-On Lab
+## Summary
+A single page, full stack Kotlin web app, built using the Ktor and React frameworks and the Kotlin multiplatform library. Lab exercise to practice with Kotlin multiframework, the Ktor framework, and the Gradle build tool. 
 
-This repository is the code corresponding to the hands-on lab [Building a Full Stack Web App with Kotlin Multiplatform](https://play.kotlinlang.org/hands-on/Full%20Stack%20Web%20App%20with%20Kotlin%20Multiplatform/).
+## Table of Contents
+1. [Introduction](#introduction)
+2. [Technologies and Languages](#technologies)
+3. [Why Kotlin?](#Why Kotlin?)
 
-**The master branch is to be used as a template. If you would like to see the completed project, check out the [final](https://github.com/kotlin-hands-on/jvm-js-fullstack/tree/final) branch.**
+## Introduction
+
+## Technologies and Languages
+1. [Ktor 1.6.7](https://ktor.io/)
+2. [React 17.0.2](https://reactjs.org/)
+3. [Kmongo 4.5.0](https://litote.org/kmongo/)
+4. [Kotlin](https://kotlinlang.org/)
+
+## Why Kotlin?
+Why use Kotlin throughout the entire stack? There are benefits to doing this in both the backend and the frontend. In the backend, Kotlin runs on the JVM and compiles into bytecode which means that it has the same security, reliability and portability of Java while being much easier to write with. In the frontend, Kotlin/JS transpiles Kotlin into type-safe JavaScript. When both the front and backend are written in Kotlin, the application can share common code (i.e. data models or validation logic)
